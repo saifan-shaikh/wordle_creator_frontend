@@ -1,0 +1,206 @@
+.appContainer {
+  color: var(--text-color);
+  font-family: "Trebuchet MS", sans-serif;
+  width: 100%;
+}
+
+.heroSection {
+  padding: clamp(50px, 10vw, 118px) 0 72px;
+}
+
+.heroCopy {
+  max-width: 710px;
+}
+
+.eyebrow,
+.panelEyebrow {
+  color: var(--accent-color);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.heroCopy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(45px, 7vw, 84px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  margin: 0;
+  max-width: 780px;
+}
+
+.heroDescription {
+  color: var(--muted-text-color);
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 25px 0 0;
+}
+
+.idInputContainer {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(55, 52, 43, 0.08);
+  box-sizing: border-box;
+  margin-top: 58px;
+  max-width: 760px;
+  padding: 28px;
+  width: 100%;
+}
+
+.panelHeading {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.panelHeading h3,
+.createPrompt h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.panelNumber {
+  align-items: center;
+  background: var(--accent-color);
+  border-radius: 50%;
+  color: #fffdf8;
+  display: flex;
+  font-size: 12px;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+}
+
+.panelHeading .panelEyebrow {
+  margin-bottom: 5px;
+}
+
+.idInputContainer label {
+  color: var(--muted-text-color);
+  display: block;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+.playControls {
+  display: flex;
+  gap: 10px;
+}
+
+.idInputContainer input {
+  background: #f8f5ee;
+  border: 1px solid var(--border-color);
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  flex: 1;
+  font: inherit;
+  font-size: 15px;
+  min-width: 0;
+  outline: none;
+  padding: 14px 15px;
+}
+
+.idInputContainer input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(65, 107, 87, 0.12);
+}
+
+.primaryButton,
+.secondaryButton {
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.primaryButton {
+  background: var(--accent-color);
+  color: #fffdf8;
+  padding: 0 21px;
+}
+
+.primaryButton:hover {
+  background: var(--accent-dark-color);
+}
+
+.createPrompt {
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-top: 58px;
+  max-width: 760px;
+  padding: 0 0 28px;
+}
+
+.createPrompt h3 {
+  font-size: 23px;
+}
+
+.createPrompt p:last-child {
+  color: var(--muted-text-color);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--accent-dark-color);
+  padding: 12px 0;
+}
+
+.secondaryButton span,
+.primaryButton span {
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+.statusMessage {
+  color: var(--accent-dark-color);
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+@media (max-width: 540px) {
+  #root {
+    padding: 0 18px;
+  }
+
+  .heroSection {
+    padding-top: 42px;
+  }
+
+  .idInputContainer {
+    padding: 22px;
+  }
+
+  .playControls,
+  .createPrompt {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primaryButton {
+    cursor: pointer;
+    min-height: 47px;
+  }
+}
+
+/* Keep the input layout stable while preserving the panel's mobile width. */
+.idInputContainer {
+  align-items: stretch;
+  box-sizing: border-box;
+}

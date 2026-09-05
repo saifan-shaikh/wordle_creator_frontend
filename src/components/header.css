@@ -1,0 +1,55 @@
+.headerContainer {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 28px 0;
+  width: 100%;
+}
+
+.brandMark {
+  align-items: center;
+  color: var(--text-color);
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brandMark h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.brandDot {
+  background: var(--highlight-color);
+  border-radius: 50%;
+  display: block;
+  height: 11px;
+  width: 11px;
+}
+
+.headerDesktopMenu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .headerDesktopMenu {
+    align-items: center;
+    display: flex;
+    gap: 28px;
+  }
+
+  .headerNote {
+    color: var(--muted-text-color);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .headerMobileMenu {
+    display: none;
+  }
+}

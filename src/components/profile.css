@@ -1,0 +1,33 @@
+.profileLoginButton {
+  align-items: center;
+  background: rgba(255, 253, 248, 0.45);
+  border: 1px solid var(--accent-color);
+  border-radius: 999px;
+  color: var(--accent-dark-color);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 17px;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.profileLoginButton::after {
+  content: "→";
+  font-size: 17px;
+  line-height: 1;
+}
+
+.profileLoginButton:hover {
+  background: var(--accent-color);
+  color: #fffdf8;
+  transform: translateY(-1px);
+}
+
+.profileLoginButton:focus-visible {
+  outline: 3px solid rgba(65, 107, 87, 0.2);
+  outline-offset: 3px;
+}
